@@ -8,7 +8,9 @@ Required:
 AutoCAD 2017
 
 Usage:
+
 Run NETLOAD and choose ClassLibrary1.dll
+
 Run IFCOUT command to create a simple IFC test file
 
 ConsoleApp1

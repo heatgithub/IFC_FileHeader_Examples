@@ -1,0 +1,55 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView_V2]'),'2;1');
+FILE_NAME(
+/* name */ 'C:\\Hprog\\HETerr3\\HT3C3D\\IFC_FileHeader_Examples\\ConsoleApp1\\ConsoleApp1.ifc',
+/* time_stamp */ '2019-01-16T05:50:57',
+/* author */ ('Henrik Ericson'),
+/* organization */ ('Unknown'),
+/* preprocessor_version */ 'GeometryGymIFC v0.0.19.0 by Geometry Gym Pty Ltd built 2019-01-08T21:00:32',
+/* originating_system */ 'ConsoleApp1 v1.0.0.0',
+/* authorization */ 'None');
+
+FILE_SCHEMA (('IFC2X3'));
+ENDSEC;
+
+DATA;
+#1= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#2= IFCDIRECTION((1.0,0.0,0.0));
+#3= IFCDIRECTION((0.0,1.0,0.0));
+#4= IFCDIRECTION((0.0,0.0,1.0));
+#5= IFCAXIS2PLACEMENT3D(#1,$,$);
+#6= IFCCARTESIANPOINT((0.0,0.0));
+#7= IFCAXIS2PLACEMENT2D(#6,$);
+#8= IFCSIUNIT(*,.LENGTHUNIT.,$,.METRE.);
+#9= IFCSIUNIT(*,.AREAUNIT.,$,.SQUARE_METRE.);
+#10= IFCSIUNIT(*,.VOLUMEUNIT.,$,.CUBIC_METRE.);
+#11= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#12= IFCAXIS2PLACEMENT3D(#11,#4,#2);
+#13= IFCLOCALPLACEMENT($,#12);
+#14= IFCSITE('2r3cD5YuPDiwd6xzFT0MjY',#20,'Default Site',$,$,#13,$,$,.ELEMENT.,$,$,$,$,$);
+#15= IFCPERSON('Henrik Ericson','Henrik Ericson',$,$,$,$,$,$);
+#16= IFCORGANIZATION($,'Unknown',$,$,$);
+#17= IFCPERSONANDORGANIZATION(#15,#16,$);
+#18= IFCAPPLICATION(#19,'0.0.19.0','ConsoleApp1 v1.0.0.0','ConsoleApp1 v1.0.0.0');
+#19= IFCORGANIZATION($,'Geometry Gym Pty Ltd',$,$,$);
+#20= IFCOWNERHISTORY(#17,#18,$,.ADDED.,$,$,$,1547614256);
+#22= IFCPROJECT('3KyAjtEyf2K82rgm5JPUXY',#20,'Default Project',$,$,$,$,$,#23);
+#23= IFCUNITASSIGNMENT((#8,#9,#10,#24,#25));
+#24= IFCSIUNIT(*,.PLANEANGLEUNIT.,$,.RADIAN.);
+#25= IFCSIUNIT(*,.TIMEUNIT.,$,.SECOND.);
+#26= IFCRELAGGREGATES('3MzbaAIcX9ZA2doX$ClDm9',#20,$,$,#22,(#14));
+#27= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#28= IFCAXIS2PLACEMENT3D(#27,$,$);
+#29= IFCLOCALPLACEMENT(#13,#28);
+#30= IFCBUILDING('2z8mJLpRDFAfT_KUIJpG3o',#20,'Default Building',$,$,#29,$,$,.ELEMENT.,$,$,$);
+#32= IFCRELAGGREGATES('1HAWpzzMH4H9a4uDjdpRBB',#20,$,$,#14,(#30));
+#33= IFCCARTESIANPOINT((0.0,0.0,0.0));
+#34= IFCAXIS2PLACEMENT3D(#33,$,$);
+#35= IFCLOCALPLACEMENT(#29,#34);
+#36= IFCBUILDINGSTOREY('2JsYHuFQzCgeXBIqgi2QRy',#20,'SitePlan',$,$,#35,$,$,.ELEMENT.,0.0);
+#37= IFCRELAGGREGATES('2eVznBfev7VAGz4$1legQN',#20,$,$,#30,(#36));
+ENDSEC;
+
+END-ISO-10303-21;
+
